@@ -2,8 +2,6 @@
 
 Este projeto foi feito para quem precisa alterar as validações do jquery.validate para os padrões de decimal e data usados no Brasil.
 
-Ex:
-
 decimal: 10,23
 
 data: 24/12/2017
