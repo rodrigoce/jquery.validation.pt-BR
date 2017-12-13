@@ -22,16 +22,17 @@ $.validator.methods.date = function (value, element) {
     else {
         var mask = "DD/MM/YYYY HH:mm:SS";
         // completa os minutos e segundos se o usuáiro não informar
-        if (val.length >= 13 && val.length < mask.length) {
+        /*if (val.length >= 13 && val.length < mask.length) {
             var resto = ":00:00";
             val = val + resto.substring(resto.length - (mask.length - val.length), resto.length);
             // apenas completa se o usuário sair do campo
             if (!$(element).is(":focus"))
                 $(element).val(val);
-        }
+        }*/
     }
 
-    return this.optional(element) || moment(val, mask, true).isValid();
+    return this.optional(element) || moment(value, mask, true).isValid();
 }
+
 
 
